@@ -1,0 +1,180 @@
+*{
+    margin:0;
+    font-family: 'Quicksand', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(to right,black 0% 50%,white 50% 100%);
+}
+
+
+.container{
+    display: flex;
+    font-size: 4rem;
+}
+
+.right{
+    background-color: white;
+    color: black;
+    width: 50%;
+    height: 100vh;
+}
+.left{
+    background-color: black;
+    color: white;
+    text-align: right;
+    width: 50%;
+    height: 100vh;
+}
+
+.truecont{
+    position: absolute;
+    top: 100px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.links{
+    width: 80%;
+    height: 50px;
+    background-image: linear-gradient(to right,rgba(255, 255, 255, 0.495),rgba(0, 0, 0, 0.456));
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    overflow: hidden;
+}
+.links>span{
+    padding: 0 13%;
+}
+
+
+#apod:hover{
+    background-color: white;
+}
+#apod:hover a{
+    color: black;
+}
+#neows:hover{
+    background-color: rgb(127, 127, 127);
+}
+#neows:hover a{
+    color:white;
+}
+#neows:hover span{
+    color:black;
+}
+#rover:hover{
+    background-color: black;
+}
+#rover:hover a{
+    color: white;
+}
+
+
+#apod,#neows,#rover{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links>span>a{
+    text-decoration: none;
+}
+#white,#white1{
+    color:white;
+}
+#black,#black1{
+    color: black;
+}
+
+.slides{
+    position: absolute;
+    top: 250px;
+    font-size: 1.5rem;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.prevcard{
+    font-size: 4rem;
+    background-color: black;
+    color:white;
+    border-radius: 20px;
+    margin:0 10px;
+}
+.nextcard{
+    font-size: 4rem;
+    background-color: white;
+    color:black;
+    border-radius: 20px;
+    margin:0 10px;
+}
+.nextcard:hover{
+    background-color: black;
+    color:white;
+}
+.prevcard:hover{
+    background-color: white;
+    color:black;
+}
+
+.card{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:50%;
+    border-radius: 30px;
+    background-color: black;
+    color:white;
+    box-shadow: 0 0 5px 5px #888888;
+    padding: 5px;
+}
+
+@keyframes animate {
+    0%{
+        filter:blur(0px);
+    }
+    50%{
+        filter:blur(50px);
+    }
+    100%{
+        filter:blur(0px);
+    }
+}
+
+
+.heading{
+    margin-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+}
+.content{
+    font-family: 'Montserrat', sans-serif;
+    font-weight:400;
+    text-align: center;
+    padding: 15px;
+}
+
+@media only screen and (max-width: 768px) {
+    .slides{
+        top:200px;
+        font-size:1rem;
+    }
+    .truecont{
+        top:80px;
+    }
+    .links>span{
+        padding: 0 8%;
+    }
+}
