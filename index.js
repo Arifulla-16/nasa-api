@@ -19,7 +19,7 @@ app.get("/apod",(req,res)=>{
 });
 
 app.get("/neows",(req,res)=>{
-    res.send("NeoWS");
+    res.sendFile(__dirname+"/neows.html");
 });
 
 app.get("/rovimg",(req,res)=>{

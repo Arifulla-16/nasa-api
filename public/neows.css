@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+    left:0;
+    top:0;
+}
+body{
+    background-image: linear-gradient(to right,black 0% 50%,white 50% 100%);
+}
+.name{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0px 10px;
+    margin-left:50% ;
+    position:absolute;
+    top:0;
+    color: black;
+}
+
+.zone{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0px 10px;
+    position:absolute;
+    margin-left: 20vw;
+    top:0;
+    color: white;
+}
