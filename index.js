@@ -26,6 +26,6 @@ app.get("/rovimg",(req,res)=>{
     res.send("Mar'Rov");
 });
 
-app.listen(3000,()=>{
+app.listen(process.env.PORT || 3000,()=>{
     console.log("started at 3000");
 });
