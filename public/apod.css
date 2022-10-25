@@ -31,6 +31,16 @@ body{
     box-shadow: 0 0 5px 5px #888888;
 }
 
+#image{
+    display: none;
+}
+
+#video{
+    margin: auto;
+    box-shadow: 0 0 5px 5px #888888;
+    display: none;
+}
+
 .desc{
     background-color: rgb(126, 126, 126);
     background-image: linear-gradient(to right,rgba(255, 255, 255, 0.349),rgba(255, 255, 255, 0.508),rgba(0, 0, 0, 0.486));

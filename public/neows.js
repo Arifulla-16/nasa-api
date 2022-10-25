@@ -6,13 +6,59 @@ var excntr = 0;
 var dacntr = 0;
 var validator = 0;
 
-$("#search").click(()=>{
-    if((($("#st_date").val()!="") || ($("#ed_date").val()!=""))){
+
+$("#form").submit(()=>{
+    if((($("#st_date").val()=="") || ($("#ed_date").val()==""))){
         if(validator==0){
             $(".guide").append("<a>Please enter valid dates.</a>");
             validator=1;
-        }   
+            return false;
+        }  
+        else{
+            return false;
+        }
     }
+    if(excntr==1 || dacntr==1){
+        return false;
+    } 
+});
+
+
+$(window).on("load",()=>{
+    const paramsString = window.location.href;
+    const searchParams = new URLSearchParams(paramsString);
+
+    var paras = [];
+
+    if(searchParams.has('ed_date')){
+        $(".preload").css("display","none");
+    }
+
+    for (const p of searchParams) {
+        paras.push(p[1]);
+    }
+
+    if(paras.length==2){
+        let fetchRes = fetch(url1+paras[0]+url2+paras[1]+url3);
+        fetchRes.then(res => res.json()).then(data => {
+            
+
+
+                //data here
+
+
+
+
+
+
+
+
+
+
+        });
+
+    }
+
 });
 
 $("#reset").click(()=>{
@@ -50,7 +96,7 @@ function datecheck(){
                 excntr=1;
             }
         }
-        else if((e-s)/(1000*60*60*24)<7 && (e-s)/(1000*60*60*24)>=0 && excntr==1){
+        else if((e-s)/(1000*60*60*24)<=7 && (e-s)/(1000*60*60*24)>=0 && excntr==1){
             $(".guide>a").remove();
             excntr=0;
         }
@@ -72,5 +118,3 @@ function datecheck(){
         }
     }
 }
-
-// check for validator a print
