@@ -127,6 +127,41 @@ body{
     color: white;
 }
 
+.postload{
+    width: 80vw;
+    margin: 100px auto 0px;
+    display: grid;
+    grid-template-columns: auto auto ;
+    grid-template-rows: auto auto ;
+}
+
+.postload>span{
+    width: 40vw;
+    height: 40vw;
+    margin: auto;
+    text-align: center;
+}
+
+.targets{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.targets>a{
+    margin: 5px;
+}
+
+.hf1{
+    background-color: black;
+    color: white;
+}
+.hf2{
+    color: black;
+    background-color: white;
+}
+
 @media only screen and (max-width: 760px) {
     .date{
         height: 40vh;
