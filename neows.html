@@ -17,6 +17,35 @@
     <span class="name">
         SPACEOSITY
     </span>
+
+    <form>
+        <span class="date">
+            <span class="guide">
+                Please select start and end date to search the asteroids approached near the earth.<br>
+                Date range should not exceed 7 days.
+            </span>
+
+            <span class="sdate">
+                <label for="st_date">Start date:</label>
+                <input type="date" name="st_date" id="st_date">
+            </span>
+            
+            <span class="edate">
+                <label for="ed_date">&nbsp&nbspEnd date:</label>
+                <input type="date" name="ed_date" id="ed_date">
+            </span>
+
+        </span>
+        <span class="butsec">
+            <span class="reset">
+                <input type="button" value=" Reset&nbsp" id="reset">
+            </span>
+            <span class="search">
+                <input type="submit" value="Search" id="search">
+            </span>
+        </span>
+    </form>      
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script src="neows.js"></script>
 </html>

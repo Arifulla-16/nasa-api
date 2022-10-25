@@ -74,7 +74,7 @@ body{
     font-weight: 600;
     margin: 0px 10px;
     position:absolute;
-    margin-left: 20vw;
+    margin-left: calc(50% - 90px);
     top:0;
     color: white;
 }
