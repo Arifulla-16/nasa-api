@@ -32,6 +32,7 @@ $(window).on("load",()=>{
 
     if(searchParams.has('ed_date')){
         $(".preload").css("display","none");
+        $(".icount").css("display","flex");
     }
 
     for (const p of searchParams) {

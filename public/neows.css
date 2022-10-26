@@ -152,7 +152,7 @@ body{
     font-weight: 900;
     width: max-content;
     margin: 100px auto 0px;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     background-image: linear-gradient(0deg,rgb(59, 59, 59),rgba(255, 255, 255));
