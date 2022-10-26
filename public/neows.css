@@ -128,18 +128,36 @@ body{
 }
 
 .postload{
-    width: 80vw;
-    margin: 100px auto 0px;
+    width: 74vw;
+    margin: 50px auto 0px;
     display: grid;
     grid-template-columns: auto auto ;
     grid-template-rows: auto auto ;
 }
 
 .postload>span{
-    width: 40vw;
-    height: 40vw;
+    width: 37vw;
+    height: 37vw;
     margin: auto;
     text-align: center;
+}
+
+.postload>span>a>span{
+    font-weight: 900;
+}
+
+.icount{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    width: max-content;
+    margin: 100px auto 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(0deg,rgb(59, 59, 59),rgba(255, 255, 255));
+    border-radius: 20px;
+    padding: 5px;
 }
 
 .targets{
@@ -148,6 +166,7 @@ body{
     justify-content: center;
     align-items: center;
 }
+
 
 .targets>a{
     margin: 5px;
@@ -166,5 +185,24 @@ body{
     .date{
         height: 40vh;
         width:90%;
+        display: flex;
+        flex-direction: column;
+    }
+    .guide{
+        flex-grow: 1;
+        padding: 10px;
+    }
+    .sdate,.edate{
+        flex-grow: 0.5;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .postload>span{
+        width:45vw;
+        height: 80vw;
+    }
+    .postload{
+        width: 90vw;
     }
 }

@@ -93,4 +93,8 @@ body{
     .desc{
         font-size: smaller;
     }
+    #video{
+        width: 336px;
+        height: 189px;
+    }
 }
