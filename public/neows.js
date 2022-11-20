@@ -43,7 +43,7 @@ $(window).on("load",()=>{
         let fetchRes = fetch(url1+paras[0]+url2+paras[1]+url3);
         fetchRes.then(res => res.json()).then(data => {
             $(".postload").css("box-shadow", "0 0 5px 5px #888888");
-            var asnippet = '<a class="dname"><span>Name :</span></a><a class="dmag"><span>Magnitude :</span></a><a class="ddia"><span>Diameter :</span></a><a class="dh"><span>Is Hazardrous :</span></a><a class="dcdate"><span>Closest Approach Date :</span></a><a class="drv"><span>Relative Velocity :</span></a><a class="dmd"><span>Miss Distance :</span></a>';
+            var asnippet = '<a class="dname"><span>Name : </span></a><a class="dmag"><span>Magnitude : </span></a><a class="ddia"><span>Diameter : </span></a><a class="dh"><span>Is Hazardrous : </span></a><a class="dcdate"><span>Closest Approach Date : </span></a><a class="drv"><span>Relative Velocity : </span></a><a class="dmd"><span>Miss Distance : </span></a>';
             var objs = data.near_earth_objects;
             var turner = 0;
             var count = data.element_count;
@@ -92,7 +92,13 @@ $(window).on("load",()=>{
                 $(val).find(".dname").append(objs[Object.keys(objs)[datenum]][astnum]["name"]);
                 $(val).find(".dmag").append(objs[Object.keys(objs)[datenum]][astnum]["absolute_magnitude_h"]);
                 $(val).find(".ddia").append(parseFloat(objs[Object.keys(objs)[datenum]][astnum]["estimated_diameter"]["kilometers"]["estimated_diameter_max"]).toFixed(2)+" km");
-                $(val).find(".dh").append(objs[Object.keys(objs)[datenum]][astnum]["is_potentially_hazardous_asteroid"]);
+                console.log(objs[Object.keys(objs)[datenum]][astnum]["is_potentially_hazardous_asteroid"]);
+                if(objs[Object.keys(objs)[datenum]][astnum]["is_potentially_hazardous_asteroid"]===false){
+                    $(val).find(".dh").append("False");
+                }
+                else{
+                    $(val).find(".dh").append("True");
+                }
                 $(val).find(".dcdate").append(objs[Object.keys(objs)[datenum]][astnum]["close_approach_data"][0]["close_approach_date_full"]);
                 $(val).find(".drv").append(parseFloat(objs[Object.keys(objs)[datenum]][astnum]["close_approach_data"][0]["relative_velocity"]["kilometers_per_hour"]).toFixed(2)+" kmph");
                 $(val).find(".dmd").append(parseFloat(objs[Object.keys(objs)[datenum]][astnum]["close_approach_data"][0]["miss_distance"]["lunar"]).toFixed(2)+" lunar");

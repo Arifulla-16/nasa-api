@@ -23,7 +23,7 @@ app.get("/neows",(req,res)=>{
 });
 
 app.get("/rovimg",(req,res)=>{
-    res.send("Mar'Rov");
+    res.sendFile(__dirname+"/marrov.html");
 });
 
 app.listen(process.env.PORT || 3000,()=>{

@@ -1,0 +1,153 @@
+*{
+    /* box-sizing: border-box; */
+    left:0;
+    top:0;
+}
+body{
+    background-image: linear-gradient(to right,black 0% 50%,white 50% 100%);
+}
+.name{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0px 10px;
+    margin-left:50% ;
+    position:absolute;
+    top:0;
+    color: black;
+}
+
+.zone{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0px 10px;
+    position:absolute;
+    margin-left: calc(50% - 130px);
+    top:0;
+    color: white;
+}
+
+.date{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    display: flex;
+    font-size: 1.2rem;
+    flex-direction: column;
+    border-radius: 30px;
+    width: 60%;
+    height: 30vh;
+    margin: 100px auto 0px;
+    overflow: hidden;
+    background-color: #888888;
+    box-shadow: 0 0 5px 5px #888888;
+}
+
+.guide{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.guide>a{
+    color: red;
+}
+
+.seldate{
+    flex-grow: 0.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seldate>input{
+    margin-left: 5px;
+}
+
+.butsec{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+
+.butsec>span{
+    margin: 0px 10px;
+}
+
+.butsec input{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+#reset,#prev{
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: white;
+    color: black;
+}
+#reset:hover,#prev:hover{
+    background-color: black;
+    color: white;
+    border-color: white;
+}
+#search:hover,#next:hover{
+    background-color: white;
+    color: black;
+    border-color: grey;
+}
+
+
+#search,#next{
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: black;
+    color: white;
+}
+
+.postloadl{
+    display: flex;
+    margin: 200px auto 100px;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    background-color: #313131;
+    box-shadow: 0 0 5px 5px #888888;
+}
+
+.postload{
+    display: none;
+}
+
+.targets{
+    width: 15%;
+    transition: width 0.5s;
+    height: auto;
+}
+
+.targets:hover{
+    width: 30%;
+    transition: width 0.5s;
+}
+
+
+@media only screen and (max-width: 650px) {
+    .postloadl{
+        flex-direction: column;
+        margin-top: 100px;
+        margin-bottom: 70px;
+        height: 600px;
+        width: 50%;
+        overflow: hidden;
+    }
+    .targets{
+        width: 40%;
+    }
+    .targets:hover{
+        width: 85%;
+        transition: width 0.5s;
+    }
+}

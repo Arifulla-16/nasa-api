@@ -53,6 +53,16 @@ body{
     padding: 0 13%;
 }
 
+#apod{
+    flex-grow: 0.8;
+}
+#neows{
+    flex-grow: 1;
+}
+#rover{
+    flex-grow: 0.8;
+}
+
 
 #apod:hover{
     background-color: white;
@@ -86,6 +96,7 @@ body{
 
 .links>span>a{
     text-decoration: none;
+    padding: 20% 60%;
 }
 #white,#white1{
     color:white;
