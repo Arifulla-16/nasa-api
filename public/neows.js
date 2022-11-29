@@ -25,12 +25,14 @@ $("#form").submit(()=>{
 
 
 $(window).on("load",()=>{
+
     const paramsString = window.location.href;
     const searchParams = new URLSearchParams(paramsString);
 
     var paras = [];
 
     if(searchParams.has('ed_date')){
+        $(".loader").fadeIn();
         $(".preload").css("display","none");
         $(".icount").css("display","flex");
     }
@@ -117,23 +119,19 @@ $(window).on("load",()=>{
                 else{
                     astnum++;
                 }
+                setTimeout(()=>{
+                    $(".loader").fadeOut();
+                },1000);
             });
-
-
-
-
-
-
-
-
-
-
-
-
-
         });
 
     }
+    else{
+        setTimeout(()=>{
+            $(".loader").fadeOut();
+        },1000);
+    }
+
 
 });
 

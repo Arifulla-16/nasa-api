@@ -19,6 +19,7 @@ $(window).on("load",()=>{
     }
 
     if(paras[0]!=""){
+        $(".loader").fadeIn();
         $(".form").css("display","none");
         $(".postload").css("display","block");
         // $(".postload").css("flex-direction","column");
@@ -42,7 +43,16 @@ $(window).on("load",()=>{
 
             });
         })
+        setTimeout(()=>{
+            $(".loader").fadeOut();
+        },4000);
     }
+    else{
+        setTimeout(()=>{
+            $(".loader").fadeOut();
+        },1000);
+    }
+
 
 });
 

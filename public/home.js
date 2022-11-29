@@ -8,6 +8,12 @@ var carddet = [
     var flag = 1;
     var tt;
 
+    $(window).on("load",()=>{
+        setTimeout(()=>{
+            $(".loader").fadeOut();
+        },4000);
+    });
+
     $(".prevcard").click(()=>{
         cntr=cntr-1;
         if(cntr<0){

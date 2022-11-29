@@ -6,6 +6,48 @@
 body{
     background-image: linear-gradient(to right,black 0% 50%,white 50% 100%);
 }
+
+.loader{
+    position: absolute;
+    height: 100vh;
+    width:100vw;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.loadermain{
+    width: 100px;
+    height:10px;
+    background-color: white;
+    animation: animate2 2s ease-in-out 1s infinite;
+}
+
+@keyframes animate2 {
+    0%{
+        height:10px;
+    }
+    20%{
+        height:100px;
+    }
+    40%{
+        width:10px;
+
+    }
+    60%{
+        height:10px;
+    }
+    80%{
+        width:100px;
+    }
+    100%{
+        height:10px;
+    }
+}
+
+
 .name{
     font-family: 'Quicksand', sans-serif;
     font-size: 2rem;
